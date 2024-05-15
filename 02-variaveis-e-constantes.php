@@ -12,6 +12,8 @@
     <h1>Variáveis e constantes</h1>
     <hr>
 
+    <h2>declararação e saida de dados usando <code>echo</code></h2>
+
     <?php
 
     //variavel
@@ -27,11 +29,19 @@
 
     //constantes (recomendavel: declarar const com letras maiusculas)
     define("AUTOR", "Jiu");//antiga
-    const Empresa = "abc tec";//moderna
+    const EMPRESA = "abc tec";//moderna
 
     // Tiago trabalha na ABC tecnologia.
     echo "<p>" .AUTOR . " trabalha na empresa " .Empresa."</p>";
     ?>
+
+    <h2>Saída de dados simplificada/direta</h2>
+
+    <!-- Estamos no Dev web em 2024. -->
+    <p> Estamos no <?=$curso?> em <?=$ano?>.</p>
+
+    <!-- Jiu trabalha na empresa abc tec -->
+    <p><?=Autor?> trabalha na empresa <?=EMPRESA?></p>
 
     </div>
     
