@@ -30,7 +30,7 @@
     const Empresa = "abc tec";//moderna
 
     // Tiago trabalha na ABC tecnologia.
-    echo AUTOR . " trabalha na empresa " .Empresa;
+    echo  "AUTOR . trabalha na empresa .Empresa" ;
     ?>
 
     </div>
