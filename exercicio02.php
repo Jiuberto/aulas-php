@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
+
     <h1>exer 2</h1>
     <hr>
 
@@ -14,22 +14,23 @@
     $identidade = array(
         //Chave associativa
         "nome" => "Aragorn", 
-        "senha" => 1998,
+        "senha" => "1998",
         "idade" => 86,
         "cidade" => "Gondor",
-        "telefone" => 11-3535-5667
+        "telefone" => ["11-3535-5667", "11-3708-27828"]
 
     );
     ?>
+
+    <pre><?=var_dump($identidade)?></pre>
     
     <ol>
-    <li><p><?=$identidade["nome"]?></p></li>
+    <li><?=$identidade["nome"]?></li>
     <li><?=$identidade["senha"]?></li>
     <li><?=$identidade["idade"]?></li>
     <li><?=$identidade["cidade"]?></li>
-    <li><?=$identidade["telefone"]?></li>
+    <li><?=$identidade["telefone"][0]?></li>
     </ol>
 
-    </div>
 </body>
 </html>
