@@ -20,8 +20,17 @@
     $area = "Back-end";
 
     // Esramos no Programador web em 2024.
-    echo "<p> Estamos no $curso em $ano.</p>"
+    echo "<p> Estamos no $curso em $ano.</p>";
 
+    //com aspas simples não funciona a execuçaõ dinamica
+    echo '<p> Estamos no $curso em $ano.</p>';
+
+    //constantes (recomendavel: declarar const com letras maiusculas)
+    define("AUTOR", "Jiu");//antiga
+    const Empresa = "abc tec";//moderna
+
+    // Tiago trabalha na ABC tecnologia.
+    echo AUTOR . "trabalha na empresa" .Empresa;
     ?>
 
     </div>
