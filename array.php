@@ -48,6 +48,20 @@
     <p>O filme <?=$filme["titulo"]?> foi lançado em <?=$filme["ano"]?> </p>
     <p> <?=$livro['titulo']?> é um ótimo livro</p>
 
+    <hr>
+
+    <h2>Comandos úteis para análise/depuração de arrays</h2>
+    <h3><code>print_r</code> e <code>var_dump()</code></h3>
+
+    <pre>
+    <?=print_r($bandas)?>
+    </pre>
+
+
+    <pre>
+    <?=var_dump($bandas)?>
+    </pre>
+
     </div>
 </body>
 </html>
