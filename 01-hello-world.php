@@ -13,8 +13,7 @@
     <?php
     
     echo "ola"; 
-    echo "<p>Senac Penha</p>"
-    echo '<p> style="text-align:center">Senac Penha</p>';
+    echo '<p> style="text-align:center">Senac Penha</p>'
     echo "<p> style='text-align:center'>Senac Penha</p>";
     echo "<p> style=\"text-align:center\">Senac Penha</p>"
 
