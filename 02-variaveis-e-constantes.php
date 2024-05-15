@@ -32,7 +32,7 @@
     const EMPRESA = "abc tec";//moderna
 
     // Tiago trabalha na ABC tecnologia.
-    echo "<p>" .AUTOR . " trabalha na empresa " .Empresa."</p>";
+    echo "<p>" .AUTOR . " trabalha na empresa " .EMPRESA."</p>";
     ?>
 
     <h2>Saída de dados simplificada/direta</h2>
@@ -41,7 +41,7 @@
     <p> Estamos no <?=$curso?> em <?=$ano?>.</p>
 
     <!-- Jiu trabalha na empresa abc tec -->
-    <p><?=Autor?> trabalha na empresa <?=EMPRESA?></p>
+    <p><?=AUTOR?> trabalha na empresa <?=EMPRESA?></p>
 
     </div>
     
