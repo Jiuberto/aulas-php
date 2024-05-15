@@ -25,11 +25,11 @@
     <pre><?=var_dump($identidade)?></pre>
     
     <ol>
-    <li><?=$identidade["nome"]?></li>
-    <li><?=$identidade["senha"]?></li>
-    <li><?=$identidade["idade"]?></li>
-    <li><?=$identidade["cidade"]?></li>
-    <li><?=$identidade["telefone"][0]?></li>
+    <li>Nome: <?=$identidade["nome"]?></li>
+    <li>Senha: <?=$identidade["senha"]?></li>
+    <li>Idade: <?=$identidade["idade"]?></li>
+    <li>Cidade: <?=$identidade["cidade"]?></li>
+    <li>Telefone: <?=$identidade["telefone"][0]?></li>
     </ol>
 
 </body>
