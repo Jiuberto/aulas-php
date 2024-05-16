@@ -9,6 +9,12 @@
 
 </head>
 
+<style>
+    html {
+        margin: 5%;
+    }
+</style>
+
 <body class="conteiner">
     <div>
         <h1>Cond</h1>
@@ -31,7 +37,7 @@
 
         /* Controle de estoque */
         $produto = "Ultrabook";
-        $qtdEmEstoque = 10; //o que temos no momento
+        $qtdEmEstoque = 0; //o que temos no momento
         $qtdCritica = 2; // minimo nescessario
         ?>
 
@@ -42,7 +48,13 @@
         /* Se a quantidade em estoque for abaixo da quantidade c´ritica, o sistema deve avisar e pedir pra repor */
 
         if ($qtdEmEstoque < $qtdCritica) {
-            echo "<p class=\"alert alert-danger\">É nescessario repor</p>";
+            echo "<p class=\"alert alert-warning\">É nescessario repor</p>";
+
+            //condicional aninhada
+            if ($qtdEmEstoque == 0) {
+                echo "<p class=\"alert alert-danger\">AGORA</p>";
+            }
+
         } else {
             /* Casocontrário, simplesmente falar que o estoque esta normal */
             echo "<p class=\"alert alert-success\">Estoque normal</p>";
