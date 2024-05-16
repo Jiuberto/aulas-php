@@ -25,7 +25,7 @@
         $numero = 50;
         if ($numero < 100) {
         ?>
-        
+
             <p>Condição é verdadeira</p>
         <?php
         }
@@ -37,30 +37,35 @@
         <?php
 
         $produto = "Ultrabook";
-        $qtdEmEstoque = 10; 
-        $qtdCritica = 2; 
+        $qtdEmEstoque = 10;
+        $qtdCritica = 2;
         ?>
 
         <h3>Produto: <?= $produto ?></h3>
         <h3>Estoque: <?= $qtdEmEstoque ?></h3>
 
-        <?php
-   
-
+<?php
         if ($qtdEmEstoque < $qtdCritica) {
-            echo "<p class=\"alert alert-warning\">É nescessario repor</p>";
+?>
+            <p class=alert alert-warning>É nescessario repor</p>
 
+<?php
             if ($qtdEmEstoque == 0) {
-                echo "<p class=\"alert alert-danger\">AGORA</p>";
+?>
+                <p class=alert alert-danger>AGORA</p>
+<?php
             }
-
-        } else {
-         
-            echo "<p class=\"alert alert-success\">Estoque normal</p>";
+?>
+<?php
+        }
+        else
+         {
+?>
+            <p class=alert alert-success>Estoque normal</p>
+<?php
         }
 
-
-        ?>
+?>
 
         <hr>
 
@@ -68,7 +73,7 @@
         <?php
         if ($produto == "Ultrabook") {
             $garantia = 5;
-        } elseif ($produto =="Geladeira") {
+        } elseif ($produto == "Geladeira") {
             $garantia = 3;
         } elseif ($produto == "TV") {
             $garantia = 2;
@@ -77,7 +82,7 @@
         }
         ?>
 
-        <p>O produto <?=$produto?> tem garatia de <span class="badge text-bg-primary"><?=$garantia?></span> ano<?php if ($garantia > 1) echo "s" ?>.</p>
+        <p>O produto <?= $produto ?> tem garatia de <span class="badge text-bg-primary"><?= $garantia ?></span> ano<?php if ($garantia > 1) echo "s" ?>.</p>
 
         <hr>
 
@@ -85,16 +90,24 @@
         <p><i>alternativa a condicionais encadeada</i></p>
 
         <?php
-        switch($produto){
-                case "Ultrabook": $garantiab = 5; break;
-                case "Geladeira": $garantiab = 3; break;
-                case "TV": $garantiab = 2; break;
-                default: $garantiab = 1; break;
+        switch ($produto) {
+            case "Ultrabook":
+                $garantiab = 5;
+                break;
+            case "Geladeira":
+                $garantiab = 3;
+                break;
+            case "TV":
+                $garantiab = 2;
+                break;
+            default:
+                $garantiab = 1;
+                break;
         }
 
         ?>
-        
-        <p>Garantia b: <?=$garantiab?></p>
+
+        <p>Garantia b: <?= $garantiab ?></p>
 
     </div>
 
