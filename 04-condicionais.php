@@ -37,7 +37,7 @@
 
         /* Controle de estoque */
         $produto = "Ultrabook";
-        $qtdEmEstoque = 0; //o que temos no momento
+        $qtdEmEstoque = 10; //o que temos no momento
         $qtdCritica = 2; // minimo nescessario
         ?>
 
@@ -63,6 +63,41 @@
 
         /* Casocontrário, simplesmente falar que o estoque esta normal */
         ?>
+
+        <hr>
+
+        <h2>Encadeada (usa <code>if, else, elseif</code>)</h2>
+        <?php
+        /* Verificando o produto e atribuindo diferentes garantias */
+        if ($produto == "Ultrabook") {
+            $garantia = 5;
+        } elseif ($produto =="Geladeira") {
+            $garantia = 3;
+        } elseif ($produto == "TV") {
+            $garantia = 2;
+        } else {
+            $garantia = 1;
+        }
+        ?>
+
+        <p>O produto <?=$produto?> tem garatia de <span class="badge text-bg-primary"><?=$garantia?></span> ano<?php if ($garantia > 1) echo "s" ?>.</p>
+
+        <hr>
+
+        <h2>Switch/case </h2>
+        <p><i>alternativa a condicionais encadeada</i></p>
+
+        <?php
+        switch($produto){
+                case "Ultrabook": $garantiab = 5; break;
+                case "Geladeira": $garantiab = 3; break;
+                case "TV": $garantiab = 2; break;
+                default: $garantiab = 1; break;
+        }
+
+        ?>
+        
+        <p>Garantia b: <?=$garantiab?></p>
 
     </div>
 
