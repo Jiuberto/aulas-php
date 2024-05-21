@@ -29,20 +29,17 @@ li:nth-child(odd) {
     $meses = ["Janeiro","Fevereiro","Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro","Outubro", "Novembro","Dezembro"];
     ?>
 
-    <ol class="list-group">
+    <ol class=">
         <?php 
         foreach ( /* $i = 0; $i < count($meses); $i++ */  $meses as $index => $mes) { 
 
-        
+            /* Neste caso, avaliamos o resto da divisão por 2. Quando é zero (ou seja, número par), atribuimos a cor vermelha. Quando é diferente de zero (ou seja, ímpar), atributos a cor azul. */
+
+            /* $cor = $i % 2 == 0 ? "red" : "blue"; */
             $class = ($index % 2 == 0) ? 'even' : 'odd';
         ?>
-            <li class="<?= $class ?>"><?= $mes ?></li>
+             li style="color: <?=$cor?"> <?=$meses[$i]
+        
         <?php 
         } ?>
     </ol>
-
-</div>
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
