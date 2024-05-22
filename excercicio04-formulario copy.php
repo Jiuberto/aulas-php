@@ -10,21 +10,25 @@
 <body>
     <h1>Formulário HTML</h1>
     <hr>
-    <form autocomplete="off" method="post" action="excercicio04-processamento.php">
+    <form autocomplete="off" method="post" action="excercicio04-processamento copy.php">
         <p> <label for="nome">Nome do produto:</label> <input required type="text" name="nome" id="nome"> </p>
 
 
-
+    <div>
         <label for="fabricante">Fabricante:</label><br>
         <select id="fabricante" name="fabricante">
             <?php
             // DESAFIO FABRICANTE
             $fabricantes = ["Fabricante A", "Fabricante B", "Fabricante C", "Fabricante D"];
             foreach ($fabricantes as $fabricante) {
-                echo "<option value=\"$fabricante\">$fabricante</option>";
+                ?>
+                echo "<option><?=$fabricante?></option>";
+                <?php
             }
             ?>
+            
         </select>
+        </div>
 
         <label for="preco">Preço:</label><br>
         <input type="number" id="preco" name="preco"><br><br>
